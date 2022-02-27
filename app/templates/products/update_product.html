@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block main %}
+<div class="row justify-content-center">
+  <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+    <div class="col-sm-16">
+      <h2><b>Cập nhật sản phẩm</b></h2>
+    </div>
+    <form method="POST" class="form">
+      <div class="mb-3">
+        <div class="form-text"></div>
+        <input type="hidden" value="{{data.id}}" id="id" name="id" />
+        <label class="form-label" for="name">Tên sản phẩm</label>
+        <input
+          class="form-control"
+          id="name"
+          name="name"
+          type="text"
+          value="{{data.name}}"
+          required
+        />
+        <label class="form-label" for="desciption">Mô tả</label>
+        <input
+          class="form-control"
+          id="desciption"
+          name="desciption"
+          type="text"
+          value="{{data.desciption}}"
+          required
+        />
+        <label class="form-label" for="price">Giá</label>
+        <input
+          class="form-control"
+          id="price"
+          name="price"
+          type="text"
+          value="{{data.price}}"
+          required
+        />
+      </div>
+      <div class="mb-3 text-center">
+        <button class="btn btn-primary d-block w-100">Chỉnh sửa</button>
+      </div>
+    </form>
+  </div>
+</div>
+{{message}} {% endblock %}
